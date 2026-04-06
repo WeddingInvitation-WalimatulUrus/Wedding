@@ -65,9 +65,9 @@ body, html {
     font-size: 10px;
     font-weight: 700;
     color: #ffffff;
-    background: #003049; /* Blue Button */
-    width: 85px;
-    height: 85px;
+    background: #5A86AD; /* Blue Button */
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
     display: flex;
     align-items: center;
