@@ -49,8 +49,8 @@ body, html {
 
 .time-box {
     background: rgba(255, 255, 255, 0.95);
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,8 +59,8 @@ body, html {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.time-box span { font-size: 15px; font-weight: bold; color: #003049; line-height: 1; }
-.time-box small { font-size: 6px; color: #666; margin-top: 3px; font-weight: bold; }
+.time-box span { font-size: 20px; font-weight: bold; color: #003049; line-height: 1; }
+.time-box small { font-size: 8px; color: #666; margin-top: 3px; font-weight: bold; }
 
 /* NAV */
 .bottom-nav {
