@@ -1,42 +1,52 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body, html {
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     background-color: #f4f4f4;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
 }
 
-/* COVER SCREEN */
+/* --- LOADING SCREEN (GOLD & BLUE) --- */
 .cover {
-    position: fixed; inset: 0; background: #fff; z-index: 999;
-    display: flex; align-items: center; justify-content: center; text-align: center;
+    position: fixed; inset: 0; background: radial-gradient(circle, #ffffff 0%, #f0f4f8 100%);
+    z-index: 999; display: flex; align-items: center; justify-content: center;
 }
-.gate {
-    padding: 40px; border: 1px solid #ddd; border-radius: 20px; background: #fff;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1); cursor: pointer;
-}
-.open-btn { display: inline-block; margin-top: 20px; padding: 10px 20px; background: #003049; color: #fff; border-radius: 5px; }
 
-/* MAIN CARD CONTAINER */
+.gate-circle {
+    width: 300px; height: 300px; background: #003049; border: 4px solid #d4af37;
+    border-radius: 50%; display: flex; flex-direction: column; align-items: center;
+    justify-content: center; text-align: center; color: #fff;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); cursor: pointer; transition: 0.3s;
+}
+
+.event-text { font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 3px; color: #d4af37; margin-bottom: 8px; }
+.names-text { font-family: 'Playfair Display', serif; font-size: 26px; line-height: 1.2; margin-bottom: 8px; }
+.date-text { font-family: 'Montserrat', sans-serif; font-size: 11px; letter-spacing: 2px; margin-bottom: 15px; }
+
+.open-btn-circle {
+    font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: bold;
+    color: #003049; background: #d4af37; width: 80px; height: 80px;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    text-align: center; animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+/* --- MAIN CARD --- */
 .card-container {
-    position: relative;
-    width: 100%;
-    max-width: 500px; /* Fits Windows perfectly while being native on mobile */
-    margin: 0 auto;
-    line-height: 0;
+    position: relative; width: 100%; max-width: 500px; margin: 0 auto; line-height: 0;
 }
 
-.full-design {
-    width: 100%;
-    height: auto;
-    display: block;
-}
+.full-design { width: 100%; height: auto; display: block; }
 
-/* COUNTDOWN POSITIONING */
+/* --- YOUR PRESERVED COUNTDOWN CSS --- */
 .countdown-overlay {
     position: absolute;
-    bottom: 22%; /* Adjust this percentage to move the boxes up or down on your image */
+    bottom: 22%; /* Adjust this to move boxes up/down on your image */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -59,17 +69,16 @@ body, html {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.time-box span { font-size: 15px; font-weight: bold; color: #003049; line-height: 1; }
-.time-box small { font-size: 7px; color: #666; margin-top: 4px; font-weight: bold; }
+.time-box span { font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: bold; color: #003049; line-height: 1; }
+.time-box small { font-family: 'Montserrat', sans-serif; font-size: 7px; color: #666; margin-top: 4px; font-weight: bold; }
 
-/* NAV */
+/* --- NAVIGATION --- */
 .bottom-nav {
     position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
-    width: 100%; max-width: 500px;
-    background: rgba(255, 255, 255, 0.95);
+    width: 100%; max-width: 500px; background: #fff;
     display: flex; justify-content: space-around; padding: 15px 0;
     border-top: 1px solid #eee; z-index: 100;
 }
-.bottom-nav a { text-decoration: none; font-size: 24px; }
+.bottom-nav a { text-decoration: none; font-size: 22px; }
 
-.hidden { display: none; }
+.hidden { display: none !important; }
