@@ -3,39 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Azwan & Nabilah</title>
+    <title>Walimatul Urus Azwan & Nabilah</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="card-canvas">
-    <img src="assets/3922857.jpg" class="base-layer">
+<audio id="bgMusic" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
 
-    <div class="text-overlay">
-        <p class="invite-text">INVITATION TO THE WEDDING OF</p>
-        <h1 class="couple-names">Nabilah & Azwan</h1>
-        <p class="date-text">2 MAY 2026</p>
-        <p class="time-text">11:30 AM - 09:00 PM</p>
-        
-        <div id="countdown" class="countdown-grid">
-            <div class="unit"><span>00</span><small>HARI</small></div>
-            <div class="unit"><span>00</span><small>JAM</small></div>
-            <div class="unit"><span>00</span><small>MIN</small></div>
-            <div class="unit"><span>00</span><small>SAAT</small></div>
-        </div>
+<div id="cover" class="cover" onclick="openInvite()">
+    <div class="gate">
+        <p>WALIMATUL URUS</p>
+        <h1>Azwan & Nabilah</h1>
+        <p>02 . 05 . 2026</p>
+        <span class="open-btn">BUKA JEMPUTAN</span>
+    </div>
+</div>
 
-        <div class="prayer-box">
-            <p class="doa">"Ya Allah, berkatilah majlis perkahwinan ini. Limpahkanlah rahmat-Mu kepada kedua mempelai."</p>
-            <p class="hashtag">#NabilahXAzwan</p>
+<div id="main-card" class="card-container hidden">
+    <img src="Untitled design.png" class="full-design" alt="Wedding Invitation">
+
+    <div class="countdown-overlay">
+        <div class="countdown">
+            <div class="time-box"><span id="days">00</span><small>HARI</small></div>
+            <div class="time-box"><span id="hours">00</span><small>JAM</small></div>
+            <div class="time-box"><span id="minutes">00</span><small>MIN</small></div>
+            <div class="time-box"><span id="seconds">00</span><small>SAAT</small></div>
         </div>
     </div>
 </div>
 
 <nav class="bottom-nav">
     <a href="tel:+60173133214">📞</a>
-    <a href="https://wa.me/60173133214">💬</a>
-    <a href="https://www.google.com/maps/search/?api=1&query=Lot+3220+Jalan+Kenari+Kampung+Bukit+Kuching+Jeram" target="_blank">📍</a>
+    <a href="https://wa.me/60123456789">💬</a>
+    <a href="https://maps.google.com/?q=Lot+3220+Jalan+Kenari+Jeram+Selangor" target="_blank">📍</a>
+    <a href="#" onclick="alert('Terima kasih! Kehadiran anda adalah hadiah terindah.')">🎁</a>
 </nav>
 
 <script src="script.js"></script>
