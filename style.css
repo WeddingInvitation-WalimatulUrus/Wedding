@@ -6,34 +6,81 @@ body, html {
     overflow-x: hidden;
 }
 
-/* --- LOADING SCREEN (GOLD & BLUE) --- */
+/* --- LOADING SCREEN --- */
 .cover {
-    position: fixed; inset: 0; background: radial-gradient(circle, #ffffff 0%, #f0f4f8 100%);
-    z-index: 999; display: flex; align-items: center; justify-content: center;
+    position: fixed;
+    inset: 0;
+    background: #ffffff;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .gate-circle {
-    width: 300px; height: 300px; background: #003049; border: 4px solid #d4af37;
-    border-radius: 50%; display: flex; flex-direction: column; align-items: center;
-    justify-content: center; text-align: center; color: #fff;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); cursor: pointer; transition: 0.3s;
+    width: 320px;
+    height: 320px;
+    background: transparent; /* Clean look */
+    border: 3px solid #c5a059; /* Gold Border */
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
 }
 
-.event-text { font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 3px; color: #d4af37; margin-bottom: 8px; }
-.names-text { font-family: 'Playfair Display', serif; font-size: 26px; line-height: 1.2; margin-bottom: 8px; }
-.date-text { font-family: 'Montserrat', sans-serif; font-size: 11px; letter-spacing: 2px; margin-bottom: 15px; }
+/* Color Control */
+.blue-text { color: #003049; } /* Navy Blue */
+.gold-text { color: #c5a059; } /* Gold */
+
+.event-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: #c5a059; /* Gold */
+    margin-bottom: 15px;
+}
+
+.names-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.date-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #c5a059; /* Gold */
+    margin-bottom: 25px;
+}
 
 .open-btn-circle {
-    font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: bold;
-    color: #003049; background: #d4af37; width: 80px; height: 80px;
-    border-radius: 50%; display: flex; align-items: center; justify-content: center;
-    text-align: center; animation: pulse 2s infinite;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: #ffffff;
+    background: #003049; /* Blue Button */
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,48,73,0.3);
+    animation: pulse-blue 2s infinite;
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
-    70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
-    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+@keyframes pulse-blue {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 48, 73, 0.4); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(0, 48, 73, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 48, 73, 0); }
 }
 
 /* --- MAIN CARD --- */
